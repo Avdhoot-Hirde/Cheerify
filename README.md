@@ -44,18 +44,26 @@ The purpose of this project is to maintain the integrity and ethics at internet 
 
 setup completed
 
-# Database setup
+## Model training
+
+1. Open Neutral folder
+2. Run neutral.py file while inside the virtual environment
+3. Model training is the essential part of a AI project as the all the model learning can't be shared through GIT due to large size
+4. The model learning may take around 10-20 minutes based on the system specifications and the size of learnings can extends upto 20GB.
+
+## Database setup
 1. In project directory open cmd in vsCode and type for windows: ' python ' and Mac or linux type ' python3 '
 2. then type ' from app import db, app '
 3. then type:
->>    with app.app_context():
-          db.create_all()
+' with app.app_context(): db.create_all() '
 
 4. A Sqlite database is created
 5. You can change database of your choice by changing the Databse URL in app.py line. 11
 6. The procedure is same for every database 
 
 
-# Run project
+## Run project
 
 Type in cmd for windows: ' python app.py ' and for Mac and linux ' python3 app.py '
+
+## NOTE: Go through all the files and check or alter all the paths in all the files as per your system
