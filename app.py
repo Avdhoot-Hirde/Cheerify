@@ -18,7 +18,7 @@ classifier = pipeline("sentiment-analysis", model="distilbert-base-uncased-finet
 
 # --- Sentiment Transfer Model Initialization ---
 
-model_path = "D:/minor2/Neutral/gpt2-sentiment-transfer"
+model_path = "Neutral/gpt2-sentiment-transfer"
 model = AutoModelForCausalLM.from_pretrained(model_path)
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 if tokenizer.pad_token is None:
