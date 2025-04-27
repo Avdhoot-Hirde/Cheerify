@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Cheerify</title>
+{% endblock  %}
+
+{% block body %}
+
+<nav>
+    <img src={{url_for('static',filename='logo.png')}} alt="image" class='logo'/>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li>Products</li>
+        <li><a href="#rev">Feedback</a></li>
+        <li><img src="https://cdn-icons-png.flaticon.com/128/5264/5264565.png" alt="" /></li>
+    </ul>
+</nav>
+
+<div id="main">
+    <div id="home">
+        <img src="static\logo.png" alt="image" id="title"/>
+        <p>A sentiment transfer model that suggests neutral feedbacks is an AI system designed to detect negative sentiment in user reviews or comments and rewrite them in a more neutral, constructive tone.</p>
+        <img src="https://miro.medium.com/v2/resize:fit:594/1*fDnVCDLv3a8tyxuZEWIS3w.png" alt="" id="sen">
+    </div>
+    <div id="rev">
+        <h1>Feedback</h1>
+        <div id="feed">
+            <textarea id="reviewInput" rows="4" cols="50" placeholder="Write your review..."></textarea><br>
+            <button onclick="submitReview()">Submit</button>
+        </div>
+        
+    
+        <div id="popup">
+            <p id="popupText"></p>
+            <button onclick="confirmTransformation(true)">Use This</button>
+            <button onclick="confirmTransformation(false)">Keep Mine</button>
+        </div>
+    
+        <div id="history">
+            <ul id="reviewList">
+                {% for task in tasks %}
+                    <li>{{ task.review }} ({{ task.date.strftime("%Y-%m-%d %H:%M") }})</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+{% endblock  %}
