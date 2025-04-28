@@ -27,19 +27,43 @@ The purpose of this project is to maintain the integrity and ethics at internet 
 1. Download the repository
 2. Open folder in VS code
 3. Open terminal and create a virtual environment using
-    - Windows: ' python -m venv .venv '
-    - Mac and linux : ' python3 -m venv .venv '
+    - Windows:
+      ``` bash
+       python -m venv .venv
+      ```
+    - Mac and linux :
+      ```bash
+      python3 -m venv .venv
+      ```
 
-4. for windows OS only :- open system powershell in base directory and enter ' Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser '
+4. for windows OS only :- open system powershell in base directory and enter 
+``` bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 5. Now to activate virtual environment open cmd in the project folder directory in vs code or the cmd
-    - windows :- ' .venv\Scripts\activate.bat '
-    - Mac Os :- ' source .venv/bin/activate '
-    - linux :- ' source .venv/bin/activate '
+    - windows :-
+      ``` bash
+      .venv\Scripts\activate.bat
+      ```
+    - Mac Os :-
+      ``` bash
+      source .venv/bin/activate
+      ```
+    - linux :-
+      ``` bash
+      source .venv/bin/activate
+      ```
 
 6. Your virtual environment is activated if cmd shows (.venv) before the directory Eg: (.venv) D:\minor2>
 7. Now install all the dependencies by writing command: 
-    - windows: ' pip install requirements.txt '
-    - Mac and linux: ' pip3 install requirements.txt '
+    - windows:
+      ``` bash
+      pip install requirements.txt
+      ```
+    - Mac and linux:
+      ``` bash
+      pip3 install requirements.txt
+      ```
     # requirements.txt file in provided in the repo with contains all the dependencies with the supported versions
 
 setup completed
@@ -52,11 +76,24 @@ setup completed
 4. The model learning may take around 10-20 minutes based on the system specifications and the size of learnings can extends upto 20GB.
 
 ## Database setup
-1. In project directory open cmd in vsCode and type for windows: ' python ' and Mac or linux type ' python3 '
-2. then type ' from app import db, app '
-3. then type:
-' with app.app_context(): db.create_all() '
-
+1. In project directory open cmd in vsCode and type:
+windows: 
+``` bash
+python
+```
+ Mac or linux:
+ ``` bash
+python3
+```
+2. Then type:
+``` bash
+from app import db, app
+``` 
+3. Then type:
+``` bash
+with app.app_context():
+    db.create_all()
+```
 4. A Sqlite database is created
 5. You can change database of your choice by changing the Databse URL in app.py line. 11
 6. The procedure is same for every database 
@@ -64,6 +101,14 @@ setup completed
 
 ## Run project
 
-Type in cmd for windows: ' python app.py ' and for Mac and linux ' python3 app.py '
+Type in cmd :
+windows:
+```bash
+python app.py
+```
+Mac and linux:
+``` bash
+python3 app.py
+```
 
 ## NOTE: Go through all the files and check or alter all the paths in all the files as per your system
