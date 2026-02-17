@@ -64,7 +64,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
       ``` bash
       pip3 install requirements.txt
       ```
-    # requirements.txt file in provided in the repo with contains all the dependencies with the supported versions
+    # requirements.txt file in provided in the repo which contains all the dependencies with the supported versions
 
 setup completed
 
